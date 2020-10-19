@@ -29,7 +29,7 @@ class CTSAPI():
 
     def get_block_detail_by_hash(self, hash_code):
         endpoint_uri = '/block/getDetailByHash'
-        hash_code = quote(hash_code, safe='')
+        # hash_code = quote(hash_code, safe='')
         response = self._send_request(end_point_uri=endpoint_uri,
                                       request_method=REQUEST_METHOD_GET,
                                       args_dict={'hash': hash_code})
@@ -37,7 +37,7 @@ class CTSAPI():
 
     def put_data(self, data, business_id):
         endpoint_uri = '/store/create'
-        data = quote(data, safe='')
+        # data = quote(data, safe='')
         response = self._send_request(end_point_uri=endpoint_uri,
                                       request_method=REQUEST_METHOD_POST,
                                       args_dict={'data': data,
@@ -46,9 +46,9 @@ class CTSAPI():
 
     def get_data(self, hash_code):
         endpoint_uri = '/store/get'
-        hash_code = quote(hash_code, safe='')
+        # hash_code = quote(hash_code, safe='')
         response = self._send_request(end_point_uri=endpoint_uri,
-                                      request_method=REQUEST_METHOD_POST,
+                                      request_method=REQUEST_METHOD_GET,
                                       args_dict={'hash': hash_code})
         return response
 

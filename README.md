@@ -86,7 +86,7 @@ height: 所需查找的区块高度
   "msg": ""
 }
 ```
-
+![image](http://static.hoopsign.com/cts_chain_getDetailByHeight.png)
 
 #### 按区块哈希获取区块详情
 
@@ -103,4 +103,59 @@ cts_instance.get_block_detail_by_hash(<hash>)
 hash: 区块哈希
 
 - 预期返回：(同上返回)
+
+#### 创建存证
+
+- 说明：
+
+创建存证内容，并返回哈希值和是否成功创建
+- 调用方法：
+
+```
+data = 'test/ 测试内容 _by_wally'
+business_id = '12345678'
+print(cts_instance.put_data(data=data, business_id=business_id).json())
+```
+
+- 输入参数：
+
+data: 存证内容
+
+businessId: 用户应用中的业务 id，长度不超过 64
+
+- 预期返回：
+
+```
+{'code': 200, 'data': {'Figure': 'KZXP53J1Pp9N8xbEelGJ99GnVYSy3rynJKtXKer1AaU=', 'OK': True}, 'msg': ''}
+```
+![image](http://static.hoopsign.com/cts_chain_create.png)
+
+#### 获取存证
+
+- 说明：
+
+通过创建存证交易返回的哈希值来获取到该存证交易所在区块的高度和存证内容
+
+- 调用方法：
+
+```
+cts_instance.get_data('KZXP53J1Pp9N8xbEelGJ99GnVYSy3rynJKtXKer1AaU=')
+```
+- 输入参数：
+
+hash: 通过创建存证交易返回的哈希
+
+- 预期返回：
+
+```
+{'code': 200, 'data': {'data': 'test/ 测试内容 _by_wally', 'businessId': '12345678', 'blockHeight': 90, 'timestamp': 1603097791}, 'msg': ''}
+```
+![image](http://static.hoopsign.com/cts_chain_query1.png)
+![image](http://static.hoopsign.com/cts_chain_query2.png)
+
+### 技术交流
+![image](http://static.hoopsign.com/wally_wechat_qr_code.jpeg?imageslim&imageView2/3/w/100)
+
+### 开源许可
+本代码永久遵循MIT License许可，允许个人和商业用途
 
