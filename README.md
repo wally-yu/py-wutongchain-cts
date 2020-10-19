@@ -1,4 +1,4 @@
-# 梧桐链CTS的Python封装
+# 梧桐链CTS Python SDK
 
 官方文档：https://lgb.wutongchain.com/file/ctsdec.pdf
 
