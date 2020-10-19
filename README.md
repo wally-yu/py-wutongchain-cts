@@ -45,6 +45,7 @@ cts_instance.get_height()
 ```
 {'code': 200, 'data': {'height': 80}, 'msg': ''}
 ```
+---
 
 #### 按区块高度获取区块详情
 - 说明：
@@ -88,6 +89,8 @@ height: 所需查找的区块高度
 ```
 ![image](http://static.hoopsign.com/cts_chain_getDetailByHeight.png)
 
+---
+
 #### 按区块哈希获取区块详情
 
 - 说明：
@@ -103,6 +106,8 @@ cts_instance.get_block_detail_by_hash(<hash>)
 hash: 区块哈希
 
 - 预期返回：(同上返回)
+
+---
 
 #### 创建存证
 
@@ -142,8 +147,7 @@ businessId: 用户应用中的业务 id，长度不超过 64
 {'code': 500, 'data': '', 'msg': {'requestId': '002792c0-18f4-461e-bb32-d92ef878f7f9', 'code': 'ECONNREFUSED', 'message': '服务器开小差了，请稍后再试'}}
 ```
 
-
-
+---
 
 #### 获取存证
 
@@ -167,6 +171,8 @@ hash: 通过创建存证交易返回的哈希
 ```
 ![image](http://static.hoopsign.com/cts_chain_query1.png)
 ![image](http://static.hoopsign.com/cts_chain_query2.png)
+
+---
 
 ### 技术交流
 ![image](http://static.hoopsign.com/wally_wechat_qr_code.jpeg?imageslim&imageView2/3/w/100)
