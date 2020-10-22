@@ -12,13 +12,13 @@ CTS是梧桐链（同济区块链）的轻量级独立服务，主要应用场�
 受限于时间，仅在Python 3.6.9 Mac上调试，并通过100%测试覆盖率
 
 ### 安装
-```pip install wutongchain-cts```
+```pip3 install wutongchain-cts```
 
 ### 使用
 1. 初始化对象
 
 ```
-from api import CTSAPI
+from wutongchain-cts import CTSAPI
 cts_instance = CTSAPI(app_id="your_app_id", secret_key="your_secret_key")
 ```
 ++*注：存证平台服务会对每个访问请求进行身份验证，通过 appid 和 secretkey（用户密钥）来验证请求的发送者身份。appid 和 secretkey 由存证平台颁发给访问者。*++
