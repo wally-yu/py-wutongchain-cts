@@ -1,21 +1,18 @@
-# 梧桐链CTS Python SDK
+# 梧桐链CTS的Python封装 SDK
 
 官方文档：https://lgb.wutongchain.com/file/ctsdec.pdf
 
 ### 背景 (Backgrounds)
-CTS是梧桐链（同济区块链）的独立服务，主要应用场景为存证，可以说是为存证领域而特制便于使用的API和服务。
-
-本Python SDK属非官方SDK。写本SDK因为本人非常认同梧桐链对于目前区块链落地应用的定位。本人认为在现阶段市面上大多数的区块链应用都可以用中心化的数据库解决，区块链应用场景目前还不具有普适性，而适合用区块链解决的场景仅适用于：1. 数字货币作为价值转移工具；2.存证（利用技术手段将自证-->他证）
+CTS是梧桐链（同济区块链）的轻量级独立服务，主要应用场景为存证，可以说是为存证领域而特制的，便于使用的API和服务。方便对区块链本身不熟悉、但适合使用区块链做存证的场景进行方便、高效对接现有业务；
 
 ### 区块链浏览器
 官方区块链浏览器：https://cts.wutongchain.com/ 
 
 ### Python 环境
-目前受限于时间，仅在Python 3.6.9 Mac上调试，并通过100%测试覆盖率
+受限于时间，仅在Python 3.6.9 Mac上调试，并通过100%测试覆盖率
 
 ### 安装
-1. 下载本SDK
-2. 调用相关方法
+```pip install wutongchain-cts```
 
 ### 使用
 1. 初始化对象
@@ -146,6 +143,7 @@ businessId: 用户应用中的业务 id，长度不超过 64
 ```
 {'code': 500, 'data': '', 'msg': {'requestId': '002792c0-18f4-461e-bb32-d92ef878f7f9', 'code': 'ECONNREFUSED', 'message': '服务器开小差了，请稍后再试'}}
 ```
+以上情况需要开发者做好容错处理
 
 ---
 
@@ -171,7 +169,6 @@ hash: 通过创建存证交易返回的哈希
 ```
 ![image](http://static.hoopsign.com/cts_chain_query1.png)
 ![image](http://static.hoopsign.com/cts_chain_query2.png)
-
 ---
 
 ### 技术交流
