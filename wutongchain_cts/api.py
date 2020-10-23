@@ -1,5 +1,4 @@
-from lib.encrypt import wutong_requests
-from urllib.parse import quote
+from wutongchain_cts.lib.encrypt import wutong_requests
 
 REQUEST_METHOD_GET = 'get'
 REQUEST_METHOD_POST = 'post'

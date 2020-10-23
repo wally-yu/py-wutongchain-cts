@@ -12,13 +12,13 @@ CTS是梧桐链（同济区块链）的轻量级独立服务，主要应用场�
 受限于时间，仅在Python 3.6.9 Mac上调试，并通过100%测试覆盖率
 
 ### 安装
-```pip3 install wutongchain-cts```
+```pip install wutongchain-cts```
 
 ### 使用
 1. 初始化对象
 
 ```
-from wutongchain-cts import CTSAPI
+from wutongchain_cts.api import CTSAPI
 cts_instance = CTSAPI(app_id="your_app_id", secret_key="your_secret_key")
 ```
 ++*注：存证平台服务会对每个访问请求进行身份验证，通过 appid 和 secretkey（用户密钥）来验证请求的发送者身份。appid 和 secretkey 由存证平台颁发给访问者。*++
@@ -33,7 +33,7 @@ cts_instance = CTSAPI(app_id="your_app_id", secret_key="your_secret_key")
 - 调用方法：
 
 ```
-cts_instance.get_height()
+cts_instance.get_height().json()
 ```
 - 输入参数：无
 - 返回：目前链的区块高度
@@ -52,7 +52,7 @@ cts_instance.get_height()
 - 调用方法：
 
 ```
-cts_instance.get_block_detail_by_height(<height>)
+cts_instance.get_block_detail_by_height(<height>).json()
 ```
 - 输入参数：
 
@@ -96,7 +96,7 @@ height: 所需查找的区块高度
 - 调用方法：
 
 ```
-cts_instance.get_block_detail_by_hash(<hash>)
+cts_instance.get_block_detail_by_hash(<hash>).json()
 ```
 - 输入参数：
 
@@ -156,7 +156,7 @@ businessId: 用户应用中的业务 id，长度不超过 64
 - 调用方法：
 
 ```
-cts_instance.get_data('KZXP53J1Pp9N8xbEelGJ99GnVYSy3rynJKtXKer1AaU=')
+cts_instance.get_data('KZXP53J1Pp9N8xbEelGJ99GnVYSy3rynJKtXKer1AaU=').json()
 ```
 - 输入参数：
 
