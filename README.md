@@ -171,9 +171,6 @@ hash: 通过创建存证交易返回的哈希
 ![image](http://static.hoopsign.com/cts_chain_query2.png)
 ---
 
-### 技术交流
-![image](http://static.hoopsign.com/wally_wechat_qr_code.jpeg?imageslim&imageView2/3/w/100)
-
 ### 开源许可
 本代码永久遵循MIT License许可，允许个人和商业用途
 
